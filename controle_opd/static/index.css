@@ -26,3 +26,14 @@
   #registers li {
     flex: 1;
   }
+
+  #registers a {
+    color: brown;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  #registres a:hover,
+  #registers a:active {
+    color: goldenrod;
+  }

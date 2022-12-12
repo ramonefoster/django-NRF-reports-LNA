@@ -2,7 +2,7 @@
     display:block;
     width:100%;
     overflow-x:auto;
-    -webkit-overflow-scrolling:touch
+    -webkit-overflow-scrolling:touch;
 }
 
 .table {
@@ -22,7 +22,7 @@
 
 .table thead th {
     vertical-align:bottom;
-    border-bottom:2px solid #dee2e6
+    border:2px solid #000000
 }
 .table tbody+tbody {
     border-top:2px solid #dee2e6

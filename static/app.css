@@ -35,6 +35,7 @@ h1, h2, h3 {
     text-decoration: none;
     color: lightgray;
     font-weight: bold;
+    padding-left: 0.5rem;
 }
 
 #main-nav a:hover, 
