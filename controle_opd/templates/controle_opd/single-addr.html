@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}COOPD | LNA{% endblock title %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'index.css' %}" />
+<link rel="stylesheet" href="{% static 'records.css' %}"/>
+{% endblock css_files %}
+
+{% block content %}
+<section id="registers">
+    <h2>Registros de {{ disp.addr }} ({{ disp.nome }} | {{ disp.local }}) </h2>
+    <div class="table-responsive">
+        <table class="table m-0">
+            <thead style="color: goldenrod;">
+                <tr>
+                    <th>Addr</th>
+                    <th>Status</th>
+                    <th>Horário</th>
+                    <th>Bits</th>
+                    <th>Tempo Online</th>                
+                </tr>
+            </thead>
+            <tbody>
+                {% for rec in report %}
+                <tr>
+                    <td><b>{{ rec.addr }}</b></td>
+                    <td><b>{{ rec.status }}</b></td>
+                    <td>{{ rec.horario }}</td>
+                    <td>{{ rec.bits }}</td>
+                    <td>{{ rec.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            
+        </table>
+    </div>
+</section>
+{% endblock content %}
+

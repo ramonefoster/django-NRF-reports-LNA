@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}COOPD | LNA{% endblock title %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'index.css' %}" />
+<link rel="stylesheet" href="{% static 'records.css' %}"/>
+{% endblock css_files %}
+{% block content %}
+<section id="registers">
+    <h2>Registers NRF</h2>
+    <div class="table-responsive">
+        <table class="table m-0">
+            {% include "controle_opd/partials/table.html" %}
+        </table>
+    </div>
+</section>
+{% endblock content %}

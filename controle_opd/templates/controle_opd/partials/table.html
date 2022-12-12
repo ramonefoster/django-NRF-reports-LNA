@@ -1,0 +1,27 @@
+<thead style="color: goldenrod;">
+    <tr>
+        <th>Addr</th>
+        <th>Status</th>
+        <th>Horário</th>
+        <th>Bits</th>
+        <th>Tempo Online</th>                
+    </tr>
+</thead>
+<tbody>
+    {% for rec in records %}
+    <tr>
+        <td><a href="{% url 'single-addr' rec.addr %}">{{ rec.addr }}</a></td>
+        <td>{{ rec.status }}</td>
+        <td>{{ rec.horario }}</td>
+        <td>{{ rec.bits }}</td>
+        <td>{{ rec.timestamp }}</td>
+    </tr>
+    {% endfor %}
+    {% if not has_next_page %}
+    <div class="alert alert-secondary" role="alert">
+        Final dos registros. Click <a href="/"
+            class="alert-link">aqui</a> para retornar ao
+        inicio.
+    </div>
+    {% endif %}
+</tbody>
