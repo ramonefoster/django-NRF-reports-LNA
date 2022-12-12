@@ -1,10 +1,10 @@
 <thead style="color: goldenrod;">
     <tr>
-        <th>Addr</th>
-        <th>Status</th>
-        <th>Horário</th>
-        <th>Bits</th>
-        <th>Tempo Online</th>                
+        <th>ADDR</th>
+        <th>STATUS</th>
+        <th>HORÁRIO</th>
+        <th>BITS</th>
+        <th>TEMPO ON (s)</th>                
     </tr>
 </thead>
 <tbody>
@@ -17,11 +17,4 @@
         <td>{{ rec.timestamp }}</td>
     </tr>
     {% endfor %}
-    {% if not has_next_page %}
-    <div class="alert alert-secondary" role="alert">
-        Final dos registros. Click <a href="/"
-            class="alert-link">aqui</a> para retornar ao
-        inicio.
-    </div>
-    {% endif %}
 </tbody>

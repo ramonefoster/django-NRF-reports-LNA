@@ -18,6 +18,7 @@ class IndexView(ListView):
 class SingleAddr(View):
     def get(self, request, slug):
         reports = ReportModel.objects.filter(addr__addr__contains=slug)
+        reports.order_by("-horario")
         disp = DispModel.objects.get(addr__contains=slug)
         return render(request, 'controle_opd/single-addr.html', {
             "report": reports,  

@@ -10,6 +10,10 @@
     color: #2e2e2e;
     margin: 3rem 0;
   }
+
+  #registers h3 {
+    text-align: center;
+  }
   
   #registers ul {
     list-style: none;
