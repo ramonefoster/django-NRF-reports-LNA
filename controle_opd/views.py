@@ -21,6 +21,6 @@ class SingleAddr(View):
         reports.order_by("-horario")
         disp = DispModel.objects.get(addr__contains=slug)
         return render(request, 'controle_opd/single-addr.html', {
-            "report": reports,  
-            "disp": disp           
+            "records": reports,
+            "disp": disp
         })

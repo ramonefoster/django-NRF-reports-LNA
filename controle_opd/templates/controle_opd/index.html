@@ -8,8 +8,10 @@
 {% block content %}
 <section id="registers">
     <h2>REGISTROS OPD</h2>
-    <div class="table-responsive">
-        <table class="table m-0">
+    <div class="table-responsive">        
+        <input type="text" id="search_addr" onkeyup="filter_func()" placeholder="Procure por Addr">
+        <label for="search_addr"><i class="bi bi-search"></i></label>
+        <table class="table m-0" id="table_log">
             {% include "controle_opd/partials/table.html" %}
         </table>
     </div>

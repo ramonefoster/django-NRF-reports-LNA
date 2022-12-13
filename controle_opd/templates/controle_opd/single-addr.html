@@ -1,41 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block title %}COOPD | LNA{% endblock title %}
-
 {% block css_files %}
 <link rel="stylesheet" href="{% static 'index.css' %}" />
 <link rel="stylesheet" href="{% static 'records.css' %}"/>
 {% endblock css_files %}
-
 {% block content %}
 <section id="registers">
     <h2>Registros de {{ disp.addr }}</h2><h3>({{ disp.funcao }} | {{ disp.local }})</h3>
     <div class="table-responsive">
         <table class="table m-0">
-            <thead style="color: goldenrod;">
-                <tr>
-                    <th>ADDR</th>
-                    <th>STATUS</th>
-                    <th>HORÁRIO</th>
-                    <th>BITS</th>
-                    <th>TEMPO ON (s)</th>                 
-                </tr>
-            </thead>
-            <tbody>
-                {% for rec in report %}
-                <tr>
-                    <td><b>{{ rec.addr }}</b></td>
-                    <td><b>{{ rec.status }}</b></td>
-                    <td>{{ rec.horario }}</td>
-                    <td>{{ rec.bits }}</td>
-                    <td>{{ rec.timestamp }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-            
+            {% include "controle_opd/partials/table.html" %}
         </table>
     </div>
 </section>
 {% endblock content %}
-

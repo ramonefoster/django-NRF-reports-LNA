@@ -1,39 +1,50 @@
 #registers {
-    margin: 7rem auto;
-    width: 90%;
-    max-width: 60rem;
-  }
+  margin: 7rem auto;
+  width: 90%;
+  max-width: 60rem;
+}
   
-  #registers h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #2e2e2e;
-    margin: 3rem 0;
-  }
+#registers h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2e2e2e;
+  margin: 3rem 0;
+}
 
-  #registers h3 {
-    text-align: center;
-  }
+#registers h3 {
+  text-align: center;
+}
   
-  #registers ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display:inline;
-    gap: 0.5rem;
-  }
+#registers ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display:inline;
+  gap: 0.5rem;
+}
   
-  #registers li {
-    flex: 1;
-  }
+#registers li {
+  flex: 1;
+}
 
-  #registers a {
-    color: brown;
-    font-weight: bold;
-    text-decoration: none;
-  }
+#registers a {
+  color: brown;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-  #registres a:hover,
-  #registers a:active {
-    color: goldenrod;
-  }
+#registres a:hover,
+#registers a:active {
+  color: goldenrod;
+}
+
+input {
+  border: 2px solid #2e2e2e;
+  border-radius: 10px;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+  width: 30%;
+  font-family: 'Courier New', Courier;
+  font-size: 18px;
+}
+

@@ -1,20 +1,45 @@
-<thead style="color: goldenrod;">
+<thead style="color: brown;">
     <tr>
         <th>ADDR</th>
         <th>STATUS</th>
         <th>HORÁRIO</th>
         <th>BITS</th>
-        <th>TEMPO ON (s)</th>                
+        <th>TEMPO ON (s)</th>
     </tr>
 </thead>
 <tbody>
     {% for rec in records %}
     <tr>
         <td><a href="{% url 'single-addr' rec.addr %}">{{ rec.addr }}</a></td>
-        <td>{{ rec.status }}</td>
+        <td><b>{{ rec.status }}</b></td>
         <td>{{ rec.horario }}</td>
-        <td>{{ rec.bits }}</td>
+        <td>{% for bit in rec.bits %}
+            {% if bit == '0' %}<i class="bi bi-lightbulb-fill"></i>
+            {% elif bit == '1' %}<i class="bi bi-lightbulb-fill" style="color: lightgreen"></i>
+            {% endif %}
+            {% endfor %}</td>
         <td>{{ rec.timestamp }}</td>
     </tr>
     {% endfor %}
 </tbody>
+
+<script>
+    function filter_func() {
+        var input, filter, table, tr, col1, i, txtValue;
+        input = document.getElementById("search_addr");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("table_log");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            col1 = tr[i].getElementsByTagName("td")[0];
+            if (col1) {
+                txtValue = col1.textContent
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }                 
+        }
+    }
+</script>
