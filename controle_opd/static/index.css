@@ -14,18 +14,6 @@
 #registers h3 {
   text-align: center;
 }
-  
-#registers ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display:inline;
-  gap: 0.5rem;
-}
-  
-#registers li {
-  flex: 1;
-}
 
 #registers a {
   color: brown;
